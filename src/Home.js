@@ -11,6 +11,7 @@ import { Carousel } from "./components/carousel";
 // }
 
 // no return need anymore
+
 export const Home = () => (
   <div>
     <header>
