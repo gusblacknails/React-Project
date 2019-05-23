@@ -5,7 +5,6 @@ import { About } from "./About";
 import { Contact } from "./Contact";
 import { NoMatch } from "./NoMatch";
 import Layout from "./components/Layout";
-import { ApiCall } from "./components/api_call";
 import "./home.css";
 
 function App() {

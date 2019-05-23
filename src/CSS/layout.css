@@ -1,0 +1,31 @@
+.jumbotron {
+  /* padding: 2rem 1rem; */
+  margin-bottom: 2rem;
+  background-color: #92191b;
+  border-radius: 0.3rem;
+}
+.btn-outline-success {
+  color: #92191b;
+  border-color: #92191b;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #92191b;
+  border-color: #92191b;
+}
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.show > .btn-outline-success.dropdown-toggle {
+  color: #fff;
+  background-color: #92191b;
+  border-color: #92191b;
+}
+.btn-outline-success:focus,
+.btn-outline-success:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.2rem rgba(207, 21, 21, 0.5);
+}
+.btn-outline-success {
+  color: #92191b;
+  border-color: #92191b;
+}
+.container {
+}

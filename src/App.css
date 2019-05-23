@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 0, auto;
 }
 
 .container {
@@ -14,4 +15,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+#root {
+  margin: 0, auto;
 }
