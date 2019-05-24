@@ -65,7 +65,10 @@ p {
 }
 
 .sliderImage {
-  -webkit-box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 7px 4px 8px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 7px 3px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 3px 8px 0px rgba(0, 0, 0, 0.4);
+}
+.divImagesSlider {
+  padding-left: 1em;
 }

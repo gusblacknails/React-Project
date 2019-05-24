@@ -71,7 +71,7 @@ export class Home extends React.Component {
     let isData = this.state.data;
     let elements = this.state.data.map((data, index) => {
       return (
-        <div>
+        <div className="divImagesSlider">
           <img
             className="sliderImage"
             src={"https://image.tmdb.org/t/p/w185/" + data.poster_path}
