@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 import {
   Navbar,
   Nav,
@@ -71,13 +72,24 @@ export class Home extends React.Component {
     let isData = this.state.data;
     let elements = this.state.data.map((data, index) => {
       return (
-        <div className="divImagesSlider">
-          <img
-            className="sliderImage"
-            src={"https://image.tmdb.org/t/p/w185/" + data.poster_path}
-            alt={"movie_" + index}
-          />
-        </div>
+        <Link
+          to={{
+            pathname: "./Details",
+            state: {
+              data: data
+            }
+          }}
+        >
+          <div className="containerImage" key={index}>
+            <img
+              className="sliderImage"
+              src={"https://image.tmdb.org/t/p/w185/" + data.poster_path}
+              alt={"movie_" + index}
+            />
+
+            <div className="titleDiv">{data.title}</div>
+          </div>
+        </Link>
       );
     });
     console.log(elements);

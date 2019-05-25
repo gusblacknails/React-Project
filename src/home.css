@@ -52,15 +52,15 @@ p {
   font-size: 2em;
 }
 .sectionTitle {
-  text-align: left;
+  text-align: center;
   font-size: 1.6rem;
   font-weight: 250;
   letter-spacing: 0.25rem;
   margin: 0;
+  padding-top: 1rem;
 }
 
 .sliderImage:hover {
-  color: #1e4668;
   transition: all 0.3s ease;
 }
 
@@ -68,7 +68,26 @@ p {
   -webkit-box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 5px 3px 8px 0px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  display: block;
+  width: 185px;
+  height: 267px;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  border-radius: 3%;
 }
-.divImagesSlider {
-  padding-left: 1em;
+
+.containerImage {
+  position: relative;
+  padding: 1em;
+  text-align: center;
+}
+
+.containerImage:hover .sliderImage {
+  opacity: 0.3;
+}
+
+.titleDiv {
+  color: #ecf0f1;
+  display: inline-block;
 }

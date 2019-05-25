@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { NoMatch } from "./NoMatch";
+import { Details } from "./Details";
 import Layout from "./components/Layout";
 import "./home.css";
 
@@ -14,8 +15,9 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/About" component={About} />
+            <Route path="/Contact" component={Contact} />
+            <Route path="/Details" component={Details} />
             <Route component={NoMatch} />
           </Switch>
         </Router>
