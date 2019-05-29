@@ -5,7 +5,7 @@ html {
   color: #ecf0f1;
   font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-height: 100vh;
-  display: flex;
+  /* display: grid; */
   /* flex-direction: column; */
   align-items: center;
   width: 100%;
@@ -13,6 +13,10 @@ html {
 * {
   box-sizing: border-box;
 }
+/* .container {
+  width: 100%;
+  justify-content: space-around;
+} */
 
 .form-control {
   font-size: 0.7rem;
@@ -90,4 +94,8 @@ p {
 .titleDiv {
   color: #ecf0f1;
   display: inline-block;
+}
+.slick-slider {
+  margin-left: 3em;
+  margin-right: 3em;
 }
