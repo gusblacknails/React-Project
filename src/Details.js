@@ -43,14 +43,17 @@ export class Details extends React.Component {
       "https://image.tmdb.org/t/p/w1280" +
       this.props.location.state.data.backdrop_path;
     const StylesDetail = styled.div`
-
-      /* background: linear-gradient(#eb01a5, #d13531); */
+      
+      /* background: rgba(255,0,0,0); */
       /* background-image: url(${backgroundImgUrl}); */
-      background-image: url(${backgroundImgUrl});
-      /* backgroundSize: "cover"; */
-      overflow: "hidden";
-      width: "720px";
-      height: "576px";
+      background-image: linear-gradient(to left, rgba(0,0,0, 0) 5%, rgba(13,15,17, 100)), url(${backgroundImgUrl});
+      /* background-size: "cover"; */
+      /* background-repeat:no-repeat; */
+      background-position: center center;
+      width: 100%; 
+      height: 100%;
+      /* background-image: url(${backgroundImgUrl}), linear-gradient(#eb01a5, #d13531); */
+      
     `;
 
     const cast = this.state.data.map((data, index) => {
@@ -70,17 +73,15 @@ export class Details extends React.Component {
 
     return (
       <React.Fragment>
-        <Grid valign="stretch">
-          <Grid.Unit size={0.5} style={{ minHeight: "2em" }}>
-            <div>
-              <h3>Sinópsis</h3>
-              <p>{this.props.location.state.data.overview}</p>
-              <h3>Reparto</h3>
-              <ul>{cast}</ul>
-            </div>
+        <Grid halign="justify">
+          <Grid.Unit size={3 / 6} style={{ minHeight: "45em" }}>
+            <h3>Sinópsis</h3>
+            <p>{this.props.location.state.data.overview}</p>
+            <h3>Reparto</h3>
+            {/* <ul>{cast}</ul> */}
           </Grid.Unit>
-          <Grid.Unit size={0.5} style={{ minHeight: "6em" }}>
-            <StylesDetail />
+          <Grid.Unit size={3 / 6} style={{ minHeight: "45em" }}>
+            <StylesDetail>{/* <ul>{cast}</ul> */}</StylesDetail>
           </Grid.Unit>
         </Grid>
       </React.Fragment>
