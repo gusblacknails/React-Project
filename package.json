@@ -13,6 +13,7 @@
     "react-dom": "^16.8.6",
     "react-glide": "^3.2.0",
     "react-glider": "^1.1.2",
+    "react-loader-spinner": "^2.3.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "react-slick": "^0.24.0",

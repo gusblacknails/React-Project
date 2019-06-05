@@ -1,0 +1,11 @@
+.sinopsis {
+  text-align: left;
+  max-width: 100%;
+}
+.gray_text {
+  color: dimgray;
+}
+.sinopsis_bottom_info {
+  display: flex;
+  flex-direction: column;
+}

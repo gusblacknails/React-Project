@@ -26,7 +26,7 @@ html {
   justify-content: flex-end;
 }
 .form-inline .form-control {
-  width: 80%;
+  width: 50%;
 }
 h1,
 p {
