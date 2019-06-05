@@ -11,8 +11,6 @@ export class Details extends React.Component {
       isLoading: true,
       componentName: null
     };
-
-    console.log("This is my initializer");
   }
 
   async componentDidMount() {
@@ -34,13 +32,11 @@ export class Details extends React.Component {
       this.setState({ isLoading: true });
       const details_json = await details_response.json();
       const credits_json = await credits_response.json();
-      console.log(credits_json);
       this.setState({
         data: { credits: credits_json, details: details_json },
         isLoading: false,
         componentName: this.props.location.state.data.title
       });
-      console.log("ASYNC", this.state.data);
     } catch (err) {
       console.log("Error ==> ", err);
     }
@@ -78,9 +74,15 @@ export class Details extends React.Component {
     // });
 
     if (this.state.isLoading) {
-      return <span>Loading</span>;
+      return (
+        <Grid valign="center">
+          <Grid.Unit size={1} style={{ minHeight: "2em" }}>
+            <Loader type="Puff" color="#00BFFF" height="100" width="100" />
+          </Grid.Unit>
+        </Grid>
+      );
     }
-    if (this.state.isLoading == false) {
+    if (this.state.isLoading === false) {
       let release_date = this.state.data.details.release_date.split("-");
       let duration = " " + this.state.data.details.runtime + " min";
       //GENRES DETAIL
@@ -140,21 +142,6 @@ export class Details extends React.Component {
                   <span>{this.state.data.details.original_title}</span>
                 </Grid.Unit>
               </Grid>
-
-              {/* <div className="sinopsis_bottom_info">
-                <div>
-                  <span className="gray_text">Director</span>
-                </div>
-                <div>
-                  <span className="gray_text">Reparto</span>
-                </div>
-                <div>
-                  <span className="gray_text">Géneros</span>
-                </div>
-              </div> */}
-
-              {/* <h3>Reparto</h3> */}
-              {/* <ul>{cast}</ul> */}
             </Grid.Unit>
             <Grid.Unit size={3 / 6} style={{ minHeight: "45em" }}>
               <StylesDetail>{/* <ul>{cast}</ul> */}</StylesDetail>
