@@ -75,14 +75,11 @@ export class Details extends React.Component {
 
     if (this.state.isLoading) {
       return (
-        <Grid valign="center">
-          <Grid.Unit size={1} style={{ minHeight: "2em" }}>
-            <Loader type="Puff" color="#00BFFF" height="100" width="100" />
-          </Grid.Unit>
-        </Grid>
+        <div className="centered">
+          <Loader type="Puff" color="#00BFFF" height="100" width="100" />
+        </div>
       );
-    }
-    if (this.state.isLoading === false) {
+    } else {
       let release_date = this.state.data.details.release_date.split("-");
       let duration = " " + this.state.data.details.runtime + " min";
       //GENRES DETAIL
@@ -96,7 +93,7 @@ export class Details extends React.Component {
         <React.Fragment>
           <Grid halign="justify">
             <Grid.Unit
-              size={3 / 6}
+              size={2.5 / 6}
               style={{ minHeight: "45em", padding: "2em" }}
             >
               <h3>{this.props.location.state.data.title}</h3>
@@ -143,7 +140,7 @@ export class Details extends React.Component {
                 </Grid.Unit>
               </Grid>
             </Grid.Unit>
-            <Grid.Unit size={3 / 6} style={{ minHeight: "45em" }}>
+            <Grid.Unit size={3.5 / 6} style={{ minHeight: "45em" }}>
               <StylesDetail>{/* <ul>{cast}</ul> */}</StylesDetail>
             </Grid.Unit>
           </Grid>

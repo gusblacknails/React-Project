@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 
 require("dotenv").config();
 
@@ -10,7 +11,7 @@ export class Home extends React.Component {
 
     this.state = {
       data: [],
-      isLoading: false
+      isLoading: true
     };
   }
 
@@ -85,12 +86,20 @@ export class Home extends React.Component {
       );
     });
     console.log(elements);
-    return (
-      <div>
-        <EstrenosTitle />
-        <Slider {...settings}>{elements}</Slider>
-      </div>
-    );
+    if (this.state.isLoading) {
+      return (
+        <div className="centered">
+          <Loader type="Puff" color="#CC1718" height="100" width="100" />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <EstrenosTitle />
+          <Slider {...settings}>{elements}</Slider>
+        </div>
+      );
+    }
   }
 }
 
